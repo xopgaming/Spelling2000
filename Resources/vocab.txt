@@ -1,1 +1,8 @@
-school
+time
+person
+year
+way
+day
+thing
+man
+world

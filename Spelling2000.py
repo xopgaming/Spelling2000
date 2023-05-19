@@ -26,6 +26,7 @@ doneList = []
 # List of index numbers for all the words answered incorrectly
 wrongList = []
 
+# Find directory the program is put in
 resourceDirectory = __file__.removesuffix("Spelling2000.py")+"Resources\\"
 
 # Open vocab.txt
@@ -68,13 +69,13 @@ print("Done loading\n")
 
 # Ask questions until there are same number of items in doneList and wordList
 while len(doneList) != len(wordList):
-    # set a random index from the list
+    # Select a random index from wordList
     number = randint(0,len(wordList)-1)
-    # check and change if word has been already been said
+    # Check and change if index already exists in doneList
     while number in doneList:
         number = randint(0,len(wordList)-1)
     
-    # Playing the converted file
+    # Play sound file
     playsound(resourceDirectory+"tempSounds\\"+str(number)+".mp3")
 
     # Ask question
@@ -86,7 +87,7 @@ while len(doneList) != len(wordList):
         doneList.append(number)
         print("Correct Answer!")
     else:
-        # If answer is wrong, print Wrong Answer
+        # If answer is wrong, and index does not already exist in wrongList, add index to wrongList
         if not number in wrongList:
             wrongList.append(number)
         print("Wrong Answer!")
