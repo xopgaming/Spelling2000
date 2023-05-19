@@ -1,0 +1,17 @@
+------------------------------
+Thanks for using Spelling2000
+------------------------------
+
+Before we satrt:
+    The following needs to be downloaded to run the program
+        install python
+        download the gTTS library
+        download the playsound library
+
+
+How to use:
+    Changing the vocabulary:
+        1. Open Resources > vocab.txt
+        2. Edit vocab.txt so that there is one vocabulary on each line
+        3. Close file
+        4. Profit
