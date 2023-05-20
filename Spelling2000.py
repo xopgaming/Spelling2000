@@ -30,18 +30,14 @@ wrongList = []
 resourceDirectory = __file__.removesuffix("Spelling2000.py")+"Resources\\"
 
 # Open vocab.txt
-f = open(resourceDirectory+"vocab.txt", "r")
-
-# Extract words from file as a list
-tempList = f.readlines()
+with open(resourceDirectory+"vocab.txt", "r") as f:
+    # Extract words from file as a list
+    tempList = f.readlines()
 
 # Strip \n from each item in list
 wordList = []
 for i in tempList:
     wordList.append(i.strip())
-
-# Close file
-f.close()
 
 # Get every mp3 file for each word
 for i in range(len(wordList)):
