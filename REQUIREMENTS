@@ -1,11 +1,12 @@
 Requirements
     install python
     download the gTTS library
-    download the playsound library
+    download the playsound library ver. 1.2.2
+        -Warning- the program will not function on most computers on the latest version of playsound
 
 How to install required Libraries:
     1. Open Command Prompt
     2. Run: 
-        py -m pip install "gTTS"
+        py -m pip install gTTS
         and
-        py -m pip install "playsound"
+        py -m pip install playsound==1.2.2
